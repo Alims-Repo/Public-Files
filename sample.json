@@ -1,0 +1,256 @@
+{
+  "networkInfo": {
+    "cellInfos": [
+      {
+        "aggregatedBands": [],
+        "band": {
+          "downlinkEarfcn": 575,
+          "name": "2100",
+          "number": 1
+        },
+        "connectionStatus": "PRIMARY",
+        "eci": 25763076,
+        "network": {
+          "iso": "BD",
+          "mcc": "470",
+          "mnc": "04"
+        },
+        "pci": 57,
+        "signal": {
+          "rsrp": -101.0,
+          "rsrq": -10.0,
+          "rssi": -75,
+          "dbm": -75
+        },
+        "subscriptionId": 2,
+        "tac": 18011,
+        "timestamp": 2993090911,
+        "type": "LTE"
+      },
+      {
+        "aggregatedBands": [],
+        "band": {
+          "downlinkEarfcn": 575,
+          "name": "2100",
+          "number": 1
+        },
+        "connectionStatus": "NONE",
+        "pci": 290,
+        "signal": {
+          "rsrp": -102.0,
+          "rsrq": -12.0,
+          "rssi": -77,
+          "dbm": -77
+        },
+        "subscriptionId": 2,
+        "timestamp": 2993090911,
+        "type": "LTE"
+      },
+      {
+        "aggregatedBands": [],
+        "band": {
+          "downlinkEarfcn": 575,
+          "name": "2100",
+          "number": 1
+        },
+        "connectionStatus": "NONE",
+        "pci": 289,
+        "signal": {
+          "rsrp": -104.0,
+          "rsrq": -17.0,
+          "rssi": -77,
+          "dbm": -77
+        },
+        "subscriptionId": 2,
+        "timestamp": 2993090911,
+        "type": "LTE"
+      },
+      {
+        "aggregatedBands": [],
+        "band": {
+          "downlinkEarfcn": 575,
+          "name": "2100",
+          "number": 1
+        },
+        "connectionStatus": "NONE",
+        "pci": 276,
+        "signal": {
+          "rsrp": -104.0,
+          "rsrq": -15.0,
+          "rssi": -79,
+          "dbm": -79
+        },
+        "subscriptionId": 2,
+        "timestamp": 2993090911,
+        "type": "LTE"
+      },
+      {
+        "band": {
+          "downlinkUarfcn": 10813,
+          "name": "2100",
+          "number": 1
+        },
+        "connectionStatus": "NONE",
+        "psc": 79,
+        "signal": {
+          "ecno": 0,
+          "rssi": -83,
+          "rssiAsu": 15,
+          "dbm": -83
+        },
+        "subscriptionId": 2,
+        "timestamp": 2993090911,
+        "type": "WCDMA"
+      },
+      {
+        "band": {
+          "downlinkUarfcn": 10813,
+          "name": "2100",
+          "number": 1
+        },
+        "connectionStatus": "NONE",
+        "psc": 504,
+        "signal": {
+          "ecno": 0,
+          "rssi": -85,
+          "rssiAsu": 14,
+          "dbm": -85
+        },
+        "subscriptionId": 2,
+        "timestamp": 2993090911,
+        "type": "WCDMA"
+      },
+      {
+        "band": {
+          "downlinkUarfcn": 10813,
+          "name": "2100",
+          "number": 1
+        },
+        "connectionStatus": "NONE",
+        "psc": 496,
+        "signal": {
+          "ecno": 0,
+          "rssi": -89,
+          "rssiAsu": 12,
+          "dbm": -89
+        },
+        "subscriptionId": 2,
+        "timestamp": 2993090911,
+        "type": "WCDMA"
+      },
+      {
+        "band": {
+          "downlinkUarfcn": 10813,
+          "name": "2100",
+          "number": 1
+        },
+        "connectionStatus": "NONE",
+        "psc": 68,
+        "signal": {
+          "ecno": 0,
+          "rssi": -79,
+          "rssiAsu": 17,
+          "dbm": -79
+        },
+        "subscriptionId": 2,
+        "timestamp": 2993090911,
+        "type": "WCDMA"
+      }
+    ],
+    "connectionType": "WIFI",
+    "duration": 424,
+    "isDataEnabled": false,
+    "isMetered": false,
+    "isRoaming": false,
+    "isp": {
+      "asname": "DOTINTERNET-AS-AP",
+      "hosting": false,
+      "ip": "103.187.94.60",
+      "mobile": false,
+      "name": "Next Tech BD",
+      "proxy": false
+    },
+    "linkSpeed": {
+      "downlink": 43287,
+      "uplink": 35016
+    },
+    "wifi": {
+      "bssid": "9c:a2:f4:99:16:b4",
+      "frequency": 5745,
+      "gateway": "192.168.0.1",
+      "iPAddress": "192.168.0.104",
+      "linkSpeed": 520,
+      "networkId": 2,
+      "rssi": -55,
+      "ssid": "Green Swedish 5G"
+    }
+  },
+  "pingInfo": {
+    "avg": 33.6065,
+    "count": 10,
+    "duration": 459,
+    "host": "google.com",
+    "jitter": 3.2600002,
+    "max": 34.737,
+    "min": 31.477,
+    "packetLoss": 0.0
+  },
+  "downlinkInfo": {
+    "avgThroughput": 2242.9433155080214,
+    "duration": 935,
+    "host": "telspear.azureedge.net",
+    "hostIp": "13.107.246.59",
+    "maxThroughput": 9164.2,
+    "numberOfSocket": 4,
+    "throughputList": [
+      0,
+      81385,
+      442903,
+      982498
+    ],
+    "timeToFirstByte": 325,
+    "totalBytes": 2097152
+  },
+  "uplinkInfo": {
+    "avgThroughput": 1089995.841995842,
+    "duration": 3848,
+    "host": "telspearsa.blob.core.windows.net",
+    "hostIp": "20.60.197.1",
+    "maxThroughput": 1128714.7470398278,
+    "numberOfSocket": 1,
+    "totalBytes": 4194304
+  },
+  "deviceInfo": {
+    "androidSdkVersion": 33,
+    "duration": 0,
+    "manufacturer": "samsung",
+    "model": "SCG01"
+  },
+  "deviceVitals": {
+    "batteryLevel": 73.0,
+    "chargerType": "UNKNOWN",
+    "duration": 4,
+    "isCharging": false,
+    "screenState": true
+  },
+  "info": {
+    "actualDuration": 6112,
+    "dataId": 1709461853753,
+    "deviceId": "a05ea1b0455c36baf6418d44",
+    "ip": "192.168.0.104",
+    "lastGenerate": "2024-03-03T16:30:53.753000+0600",
+    "parallel": false,
+    "threadDurationTotal": 5253,
+    "type": "Worker"
+  },
+  "deviceLocation": {
+    "accuracy": 100.0,
+    "age": 5997,
+    "altitude": -37.69999694824219,
+    "duration": 7,
+    "latitude": 23.7742858,
+    "longitude": 90.4302331,
+    "speed": 0.0,
+    "type": "fused"
+  }
+}
