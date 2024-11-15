@@ -1,0 +1,73 @@
+import java.io.*;
+import java.net.*;
+import java.util.concurrent.atomic.AtomicInteger;
+
+public class SummationServer {
+    private static final int PORT = 12345;
+    private static final int MAX_CLIENTS = 3;
+    private static AtomicInteger clientCount = new AtomicInteger(0);
+
+    public static void main(String[] args) {
+        try (ServerSocket serverSocket = new ServerSocket(PORT)) {
+            System.out.println("Server is running...");
+
+            while (true) {
+                if (clientCount.get() >= MAX_CLIENTS) {
+                    System.out.println("Max clients reached. Shutting down server.");
+                    break;
+                }
+
+                Socket clientSocket = serverSocket.accept();
+                clientCount.incrementAndGet();
+                System.out.println("Client connected. Current count: " + clientCount.get());
+
+                new Thread(new ClientHandler(clientSocket)).start();
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static class ClientHandler implements Runnable {
+        private Socket clientSocket;
+
+        public ClientHandler(Socket socket) {
+            this.clientSocket = socket;
+        }
+
+        @Override
+        public void run() {
+            try (
+                BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+                PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true)
+            ) {
+                out.println("Welcome to the Summation Server! Please enter a number N for summation:");
+
+                String input;
+                while ((input = in.readLine()) != null) {
+                    try {
+                        int n = Integer.parseInt(input);
+                        int sum = calculateSum(n);
+                        out.println("Summation up to " + n + " is: " + sum);
+                    } catch (NumberFormatException e) {
+                        out.println("Invalid number. Please enter an integer.");
+                    }
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    clientSocket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("Client disconnected.");
+            }
+        }
+
+        private int calculateSum(int n) {
+            return n * (n + 1) / 2;
+        }
+    }
+}
