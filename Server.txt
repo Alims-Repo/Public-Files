@@ -71,3 +71,55 @@ public class SummationServer {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.io.*;
+import java.net.*;
+
+public class SummationClient {
+    private static final String SERVER_ADDRESS = "localhost";
+    private static final int SERVER_PORT = 12345;
+
+    public static void main(String[] args) {
+        try (Socket socket = new Socket(SERVER_ADDRESS, SERVER_PORT);
+             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+             BufferedReader consoleReader = new BufferedReader(new InputStreamReader(System.in))
+        ) {
+            System.out.println("Connected to the server.");
+
+            String response;
+            while ((response = in.readLine()) != null) {
+                System.out.println("Server: " + response);
+
+                if (response.startsWith("Summation")) {
+                    System.out.print("Enter a number (or 'exit' to quit): ");
+                    String input = consoleReader.readLine();
+
+                    if ("exit".equalsIgnoreCase(input)) {
+                        break;
+                    }
+                    out.println(input);
+                }
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
